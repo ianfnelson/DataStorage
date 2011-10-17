@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DDF97FDF-D62D-4B6D-9671-0057E2D46F40}</ProjectGuid>
+    <ProjectGuid>{26600645-507B-4EB6-8F9C-57612A14C5D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IanFNelson.DataStorage</RootNamespace>
-    <AssemblyName>IanFNelson.DataStorage</AssemblyName>
+    <RootNamespace>IanFNelson.DataStorage.Tests</RootNamespace>
+    <AssemblyName>IanFNelson.DataStorage.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,23 +31,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="DataStorageSection.cs" />
-    <Compile Include="DataStorageService.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="IDataStorageService.cs" />
-    <Compile Include="ObjectLockedException.cs" />
-    <Compile Include="PersistedObject.cs" />
-    <Compile Include="PersistedObjectCollection.cs" />
+    <Compile Include="DataStoreFixture.cs" />
+    <Compile Include="NonSerializableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializableObject1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IanFNelson.DataStorage\IanFNelson.DataStorage.csproj">
+      <Project>{DDF97FDF-D62D-4B6D-9671-0057E2D46F40}</Project>
+      <Name>IanFNelson.DataStorage</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

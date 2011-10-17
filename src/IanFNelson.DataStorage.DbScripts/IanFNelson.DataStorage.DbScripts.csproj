@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{DDF97FDF-D62D-4B6D-9671-0057E2D46F40}</ProjectGuid>
+    <ProjectGuid>{FDA0D5D6-AD9D-4F24-AD7C-DBC1EBDA660B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IanFNelson.DataStorage</RootNamespace>
-    <AssemblyName>IanFNelson.DataStorage</AssemblyName>
+    <RootNamespace>IanFNelson.DataStorage.DbScripts</RootNamespace>
+    <AssemblyName>IanFNelson.DataStorage.DbScripts</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,22 +32,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="DataStorageSection.cs" />
-    <Compile Include="DataStorageService.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="IDataStorageService.cs" />
-    <Compile Include="ObjectLockedException.cs" />
-    <Compile Include="PersistedObject.cs" />
-    <Compile Include="PersistedObjectCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BuildDB.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
